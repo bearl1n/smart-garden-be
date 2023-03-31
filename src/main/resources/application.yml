@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://127.0.0.1:5432/smartgardendb
+    username: pguser
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+#springdoc.swagger-ui.path: /swagger-ui.html
+
+mqtt:
+  host:
+    uri: tcp://127.0.0.1:1883
+  username: mqtt-test
+  password: mqtt-test
+  consumer:
+    defaultTopic: IOT_INFO
+  producer:
+    defaultTopic: IOT_LISTEN
